@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    overflow-x: hidden;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+body{
+    background: rgb(235, 214, 214) !important;
+}
+
+.header{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    padding: 2% 7%;
+}
+
+
+.header .logo img{
+  width: 70%;
+}
+.header .nav{
+margin-top: -15px;
+}
+
+.header .nav ul{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.header .nav img{
+    width: 50px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.header .nav ul li a{
+    color: rgb(2, 2, 2);
+    margin: 15px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-decoration: none;
+    
+}
+
+.header .nav ul li a:hover{
+    color: white;
+}
+
+.header .nav ul li:hover{
+    background-color: rgb(16, 16, 16);
+    padding: 5px 0px;
+    border-radius: 10px;
+    transition: .3s;
+    transform: scale(1.02);
+}
+
+
+.carousel{
+    overflow: hidden;
+    margin: 100px auto;
+    width: 80%;
+    margin-top: 0;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 500px;
+}
+
+ .texts h3{
+    
+    text-align: center;
+    font-weight: 400;
+    color: rgb(77, 48, 48);
+    
+}
+.container .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container .row .col-6{
+    width: 50%;
+}
+.container .row .col-6 .img{
+    object-fit:cover;
+    margin-left: 50px;
+    border-radius: 15px;
+}
+
+
+.container .row .col-6  .btn{
+    background: linear-gradient(60deg,rgb(227, 149, 162), rgb(179, 140, 140), rgb(235, 214, 214), rgb(235, 214, 214));
+    background-size: 500% 500%;
+    animation: animeBG 4s ease infinite;
+    animation-direction: alternate;
+    cursor: pointer;
+    overflow-y: hidden;
+    color: aliceblue;
+    font-size: 17px;
+    padding: 7px 20px;
+    border: none;
+    color: black;
+}
+
+.container .row .col-6 p{
+    line-height: 40px;
+}
+
+
+.footer{
+    align-items: center;
+    text-align: center;
+    margin: 6rem;
+}
+
+.footer h2{
+    margin: 20px;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.footer p{
+    color: rgb(86, 86, 86);
+    margin-top: 3rem;
+}
+.footer i{
+    margin: 10px;
+    font-size: 1.4rem;
+    color:rgb(250, 85, 59);
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.footer i:hover{
+    transform: scale(1.1);
+    transition: .3s;
+    color: black;
+}
+.footer h3{
+    margin-top: 2rem;
+    font-weight: 300;
+    color: rgb(86, 86, 86);
+}
+
+
+#check{
+    display: none;
+}
+
+.checkbtn{
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    right: 0;
+    line-height: 70px;
+    margin-right: 50px;
+    cursor: pointer;
+    display: none;
+    
+}
+
+
+
+
+
+@media only screen and (max-width:568px){
+
+    .nav ul li{
+        display: none;
+    }
+    .checkbtn{
+        display: block;
+        
+    }
+    ul{
+        position:fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(145, 223, 235);
+        top: 80px;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        transition: all .5s;
+    }
+    .header .nav ul li{
+        margin: 50px 0;
+        padding: 10px;
+       
+        
+    }
+    .header .nav ul li a{
+
+        font-size: 25px;
+
+    }
+    #check:checked ~ ul{
+        left: 120%;
+    }
+    .nav ul img{
+        display: none;
+    }
+    .nav ul li{
+        display: none;
+    }
+    .container{
+        position: relative;
+        
+    }
+    .container .row{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .container .row .col-6{
+        width: 100%;
+        
+    }
+    .container .row .col-6 .img {
+       width: 80%;
+       position: relative;
+       right: 18px;
+       
+    }
+
+    .carousel{
+        width: 100%;
+        padding: 10px;
+        
+    }
+}
